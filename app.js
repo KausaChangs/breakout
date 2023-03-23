@@ -9,3 +9,5 @@ function addBlock() {
 
   grid.appendChild(block);
 }
+
+addBlock();
