@@ -12,14 +12,18 @@ class Block {
   }
 }
 
-//draw my block
-function addBlock() {
-  const block = document.createElement("div");
-  block.classList.add("block");
-  block.style.left = "100px";
-  block.style.bottom = "50px";
+//all my blocks
+const blocks = [new Block(10, 270)];
 
-  grid.appendChild(block);
+//draw all my blocks
+function addBlocks() {
+  // const block = document.createElement("div");
+  // block.classList.add("block");
+  // block.style.left = "100px";
+  // block.style.bottom = "50px";
+  // grid.appendChild(block);
+
+  for (let i = 0; i < blocks.length; i++) {}
 }
 
-addBlock();
+addBlocks();
