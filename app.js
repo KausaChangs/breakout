@@ -15,15 +15,18 @@ class Block {
 //all my blocks
 const blocks = [new Block(10, 270)];
 
+console.log(blocks[0]);
+
 //draw all my blocks
-function addBlocks() {
-  // const block = document.createElement("div");
-  // block.classList.add("block");
-  // block.style.left = "100px";
-  // block.style.bottom = "50px";
-  // grid.appendChild(block);
 
-  for (let i = 0; i < blocks.length; i++) {}
-}
+// function addBlocks() {
+//   for (let i = 0; i < blocks.length; i++) {
+//     const block = document.createElement("div");
+//     block.classList.add("block");
+//     block.style.left = "100px";
+//     block.style.bottom = "50px";
+//     grid.appendChild(block);
+//   }
+// }
 
-addBlocks();
+// addBlocks();
