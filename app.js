@@ -67,5 +67,8 @@ function moveUser(e) {
     case "ArrowLeft":
       currentPosition[0] -= 10;
       drawUser();
+      break;
   }
 }
+
+document.addEventListener("keydown", moveUser);
