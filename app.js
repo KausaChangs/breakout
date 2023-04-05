@@ -81,3 +81,9 @@ function moveUser(e) {
 }
 
 document.addEventListener("keydown", moveUser);
+
+//add ballconsty
+
+const ball = document.createElement("div");
+ball.classList.add("ball");
+grid.appendChild(ball);
