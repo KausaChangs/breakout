@@ -3,6 +3,7 @@ const blockWidth = 100;
 const blockHeight = 20;
 const ballDiameter = 20;
 const boardWidth = 560;
+const boardHeight = 300;
 let timerId;
 let xDirection = 2;
 let yDirection = 2;
@@ -106,6 +107,7 @@ function moveBall() {
   ballCurrentPosition[0] += xDirection;
   ballCurrentPosition[1] += yDirection;
   drawBall();
+  checkForCollisions();
 }
 
 timerId = setInterval(moveBall, 30);
@@ -113,10 +115,30 @@ timerId = setInterval(moveBall, 30);
 //check for collisions
 function checkForCollisions() {
   //check for wall collisions
-  if (ballCurrentPosition[0] >= boardWidth - ballDiameter) {
+  if (
+    ballCurrentPosition[0] >= boardWidth - ballDiameter ||
+    ballCurrentPosition[1] >= boardHeight - ballDiameter
+  ) {
     changeDirection();
   }
 }
 
 //change direction function
-function changeDirection() {}
+function changeDirection() {
+  if (xDirection === 2 && yDirection === 2) {
+    xDirection = -2;
+    return;
+  }
+  if (xDirection === 2 && yDirection === -2) {
+    xDirection = -2;
+    return;
+  }
+  if (xDirection === -2 && yDirection === -2) {
+    yDirection = 2;
+    return;
+  }
+  if (xDirection === -2 && yDirection === 2) {
+    xDirection = 2;
+    return;
+  }
+}
