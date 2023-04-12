@@ -1,4 +1,5 @@
 const grid = document.querySelector(".grid");
+const scoreDisplay = document.querySelector("#score");
 const blockWidth = 100;
 const blockHeight = 20;
 const ballDiameter = 20;
@@ -127,6 +128,7 @@ function checkForCollisions() {
 
   if (ballCurrentPosition[1] <= 0) {
     clearInterval(timerId);
+    scoreDisplay.innerHTML("You lose");
   }
 }
 
