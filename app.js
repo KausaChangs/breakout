@@ -126,7 +126,7 @@ function checkForCollisions() {
 //change direction function
 function changeDirection() {
   if (xDirection === 2 && yDirection === 2) {
-    xDirection = -2;
+    yDirection = -2;
     return;
   }
   if (xDirection === 2 && yDirection === -2) {
