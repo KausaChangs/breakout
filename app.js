@@ -6,7 +6,7 @@ const ballDiameter = 20;
 const boardWidth = 560;
 const boardHeight = 300;
 let timerId;
-let xDirection = 2;
+let xDirection = -2;
 let yDirection = 2;
 
 const userStart = [230, 10];
@@ -129,6 +129,7 @@ function checkForCollisions() {
   if (ballCurrentPosition[1] <= 0) {
     clearInterval(timerId);
     scoreDisplay.innerHTML("You lose");
+    document.removeEventListener("keydown", moveUser);
   }
 }
 
