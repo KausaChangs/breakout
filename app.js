@@ -128,7 +128,7 @@ function checkForCollisions() {
 
   if (ballCurrentPosition[1] <= 0) {
     clearInterval(timerId);
-    scoreDisplay.innerHTML("You lose");
+    scoreDisplay.innerHTML = "You lose!";
     document.removeEventListener("keydown", moveUser);
   }
 }
