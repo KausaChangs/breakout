@@ -16,6 +16,8 @@ let currentPosition = userStart;
 const ballStart = [270, 40];
 let ballCurrentPosition = ballStart;
 
+let score = 0;
+
 //create block
 class Block {
   constructor(xAxis, yAxis) {
@@ -127,6 +129,8 @@ function checkForCollisions() {
       allBlocks[i].classList.remove("block");
       blocks.splice(i, 1);
       changeDirection();
+      score++;
+      scoreDisplay.innerHTML = score;
     }
   }
 
